@@ -1,7 +1,11 @@
-export default function Home() {
+
+import { siteConfig } from "@/config/site";
+
+export default function HomePage() {
   return (
     <main>
-      <div>Hello world!</div>
+      <h1>{siteConfig.name}</h1>
+      <p>Platform foundation initialized successfully.</p>
     </main>
   );
 }
