@@ -1,15 +1,14 @@
-# Top G Global — Phase 3B Part 1
+# Top G Global — Phase 3C Public Entry Implementation (first frozen pass)
 
-One new ZIP containing frozen AUTH-01, AUTH-02, AUTH-03 UI implementations, email callback/resend and account-holder post-login page. The **only overwritten file** is `src/app/api/auth/sign-up/route.ts` (to preserve the form's full-name field). No SQL migrations, previous designs, membership approvals or member IDs are changed.
+Target: `C:\Users\USER\Desktop\top-g-global-rebuild` on Windows; VS Code integrated **CMD**.
 
-**VS Code CMD extraction:**
+1. Ensure your work is safely committed/synced; run `git status --short` and resolve unexpected edits before extraction.
+2. Extract this ZIP at the project **root** using `tar -xf "%USERPROFILE%\Downloads\Top_G_Global_Phase3C_Frozen_Public_Entry.zip" -C "%USERPROFILE%\Desktop\top-g-global-rebuild"`.
+3. Run `node scripts\maintenance\fix-auth-layout-date.mjs` once. It edits ONLY the known dynamic copyright year in the existing auth layout, is idempotent, and aborts if code is unexpected.
+4. Run `npx vitest run && npx tsc --noEmit && npm run lint && npm run build`.
+5. Start on Laptop 2 using `npm run dev -- -p 3001`.
+6. Browse: `http://localhost:3001/`, `http://localhost:3001/about`, `http://localhost:3001/join`, then `http://localhost:3001/auth/sign-in`.
 
-```
-cd /d "%USERPROFILE%\Desktop\top-g-global-rebuild"
-tar -xf "%USERPROFILE%\Downloads\Top_G_Global_Phase3B_Frozen_Auth_Starter.zip" -C "%USERPROFILE%\Desktop\top-g-global-rebuild"
-npx vitest run && npx tsc --noEmit && npm run lint && npm run build
-```
+Intentional overwrite: **`src/app/page.tsx` only.** This replaces the Phase 0 placeholder homepage. `scripts/maintenance/fix-auth-layout-date.mjs` may also be replaced with the same known idempotent repair script if already installed. All other paths are new additions.
 
-**Before testing email verification:** Set Supabase (new rebuild project) Authentication > URL Configuration: Site URL `http://localhost:3000`; allow Redirect URL `http://localhost:3000/auth/callback`.
-
-Full instructions, limitations, and Git commands: `docs/setup/PHASE_3B_AUTH_UI_INSTALL.md`.
+No secrets, database migrations, or auth endpoint replacements. See `docs/compliance/PHASE_3C_PUBLIC_FROZEN_ENTRY_QA.md` for source fidelity and limitations.
