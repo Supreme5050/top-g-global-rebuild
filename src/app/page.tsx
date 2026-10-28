@@ -1,1 +1,15 @@
-export default function Home(){return <main><section className="hero" aria-labelledby="hero-title"><header className="navigation"><a href="/" className="brand" aria-label="Top G Global home">TOP G <span>GLOBAL</span><small>BUILT IN SPIRIT</small></a><span className="nav-caption">A KINGDOM PURSUIT ORGANIZATION</span><a className="nav-action" href="#discover">DISCOVER <span aria-hidden="true">↗</span></a></header><div className="sculpture" aria-hidden="true"><canvas data-cinematic-sculpture /></div><div className="hero-content"><p className="eyebrow">— TOP G GLOBAL <span>/ THE JOURNEY OF BECOMING</span></p><h1 id="hero-title">Transforming<br/><em>ordinary people</em><br/>into <strong>giants.</strong></h1><p className="statement">Built in Spirit. Strong in Mind.<br/>Wealthy in Purpose.</p><p className="description">A Kingdom pursuit organization committed to transformation, purpose, leadership and meaningful impact.</p><a className="cta" href="#discover">DISCOVER TOP G <span aria-hidden="true">↗</span></a></div><div className="hero-footer"><span>THE JOURNEY OF BECOMING</span><a href="#discover">↓ SCROLL TO EXPLORE</a><span>01 / THE ENCOUNTER</span></div></section><section id="discover" className="next-chapter" aria-labelledby="chapter-title"><span className="eyebrow">02 / PURPOSE</span><h2 id="chapter-title">Transformation is intentional.<br/><em>Greatness is developed.</em></h2><p>Built in Spirit. Strong in Mind. Wealthy in Purpose.</p><small>HERO REVIEW — THE NEXT CHAPTER FOLLOWS AFTER APPROVAL</small></section></main>}
+import HeroControls from "./hero-controls";
+export default function Home(){
+return <main><section className="hero" aria-labelledby="hero-title">
+<header className="navigation">
+<a href="/" className="brand" aria-label="Top G Global home"><img src="/brand/top-g-official-preview.png" width="100" height="100" alt="Top G Global official gold emblem" /></a>
+<HeroControls header />
+</header>
+<div className="atmosphere" aria-hidden="true"/><div className="sculpture" aria-hidden="true"><canvas data-cinematic-sculpture /></div>
+<div className="hero-content"><h1 id="hero-title">Transforming<br/><em>ordinary people</em><br/>into <strong>giants.</strong></h1>
+<span className="gold-divider" aria-hidden="true"/><HeroControls />
+</div><div className="ground-light" aria-hidden="true"/>
+</section>
+<section id="discover" className="next-chapter" aria-labelledby="chapter-title"><span className="eyebrow">TOP G GLOBAL · THE NEXT CHAPTER</span><h2 id="chapter-title">Greatness is developed.</h2><p>The next section will be built after the cinematic hero is approved.</p></section>
+</main>
+}
