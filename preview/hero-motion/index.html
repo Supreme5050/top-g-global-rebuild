@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Top G Global | Cinematic Hero Motion Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#090603;--text:#f7f1e8;--muted:#d9cdb9;--gold:#f3a54b;--gold-hi:#ffc470;--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'Jost',Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans)}
+button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}:focus-visible{outline:2px solid var(--gold-hi);outline-offset:4px}
+nav.main-nav{position:relative;z-index:10;height:clamp(65px,6.2vw,88px);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(17px,3.3vw,55px);background:linear-gradient(180deg,#100904,#090603);border-bottom:1px solid rgba(243,165,75,.30);box-shadow:0 6px 35px rgba(0,0,0,.4)}
+.brand img{display:block;height:clamp(45px,4.9vw,68px);width:auto;max-width:180px;object-fit:contain;mix-blend-mode:screen}
+.nav-links{display:flex;gap:clamp(21px,3.4vw,56px);align-items:center;list-style:none;margin:0;padding:0;position:absolute;left:45.5%;transform:translateX(-50%)}
+.nav-links button,.nav-links a{font:500 clamp(10px,.85vw,12px) var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:10px 0;background:none;border:0;white-space:nowrap}
+.nav-links button:hover,.nav-links a:hover,.nav-links .current{color:var(--gold-hi)}
+.nav-links .current{border-bottom:1px solid var(--gold)}
+.nav-more{position:relative}.subnav{position:absolute;top:40px;right:0;min-width:220px;padding:10px;background:#171009;border:1px solid #976434;border-radius:8px;display:grid;box-shadow:0 14px 36px #000a}.subnav[hidden]{display:none}
+.subnav button{font-size:11px;text-align:left;padding:11px 13px;text-transform:none;letter-spacing:.03em}.subnav button:hover{background:#3b250f}
+.btn-join{display:inline-flex;align-items:center;gap:12px;padding:.9em 1.5em;border:1px solid var(--gold);border-radius:8px;font-size:clamp(11px,1vw,13px);color:var(--gold-hi);background:rgba(243,165,75,.05);box-shadow:0 0 18px rgba(243,165,75,.2),inset 0 0 12px rgba(243,165,75,.09)}
+.btn-join:hover{background:rgba(243,165,75,.15)}
+.menu-button{display:none;border:1px solid #ae7a3a;border-radius:5px;padding:9px 12px;background:#160d07;color:var(--gold-hi);font-size:12px}
+.mobile-items{display:none;position:absolute;top:100%;left:0;right:0;padding:10px 20px 20px;background:#130c06;border-bottom:1px solid #8d5b2d;box-shadow:0 20px 40px #000b}.mobile-items[hidden]{display:none}.mobile-items button{display:block;width:100%;padding:12px;border:0;background:none;text-align:left;color:#ead2ab;font-size:13px}
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:calc(100svh - clamp(65px,6.2vw,88px));background:#0b0603 url('cinematic-backdrop.jpg') 70% 100%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(6,4,2,.97) 0%,rgba(6,4,2,.91) 17%,rgba(6,4,2,.73) 31%,rgba(6,4,2,.20) 53%,rgba(6,4,2,0) 81%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(9,5,3,.25),transparent 26%)}
+#sculpture{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;filter:drop-shadow(0 0 5px rgba(249,147,45,.24))}
+.aurora{pointer-events:none;position:absolute;z-index:0;right:-10%;bottom:-13%;width:86%;height:35%;background:radial-gradient(ellipse at 62% 45%,rgba(243,164,72,.32),transparent 55%),radial-gradient(ellipse at 79% 55%,rgba(255,198,103,.17),transparent 35%);filter:blur(22px)}
+.content{position:relative;z-index:2;min-height:inherit;display:flex;flex-direction:column;padding:clamp(42px,9.2vh,100px) 0 clamp(25px,9vh,84px) clamp(22px,7.7vw,130px)}
+.crumb{display:flex;align-items:center;gap:.9em;font-size:clamp(9px,.95vw,12.5px);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.crumb:before{content:"";height:1px;width:2.3em;background:var(--gold)}.crumb em{font-style:normal;color:var(--gold)}.crumb .sep{color:#bda88d}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(47px,5.75vw,98px);line-height:.98;letter-spacing:-.012em;margin:clamp(24px,3.6vw,54px) 0 0;text-shadow:0 7px 30px #0008}
+h1 span{display:block}h1 .italic{font-style:italic}h1 .gold{display:inline;color:var(--gold)}
+.rule{width:clamp(26px,3vw,44px);height:2px;background:var(--gold);margin:clamp(20px,2.4vw,34px) 0 0}
+.lede{margin:auto 0 clamp(17px,2.4vw,34px);padding-top:40px;font-size:clamp(12px,1.3vw,18px);line-height:1.55;color:var(--muted);font-weight:400}
+.ctas{display:flex;align-items:center;gap:clamp(18px,2.8vw,43px);flex-wrap:wrap}
+.btn-explore{display:inline-flex;align-items:center;gap:1.2em;padding:.95em 1.5em;border:0;border-radius:8px;font-size:clamp(11px,1.15vw,15px);font-weight:500;color:#1d1105;background:linear-gradient(180deg,#ffd08a,#ec9f3f 55%,#c9801f);box-shadow:0 8px 28px rgba(243,165,75,.3),inset 0 1px rgba(255,255,255,.5)}
+.btn-explore:hover{transform:translateY(-2px)}
+.watch{display:inline-flex;gap:.9em;align-items:center;background:none;border:0;font-size:clamp(11px,1.1vw,14.5px);color:var(--text)}
+.watch .play{width:2.7em;height:2.7em;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold-hi)}
+.status{position:absolute;right:15px;bottom:12px;z-index:3;display:flex;align-items:center;gap:8px;border:1px solid rgba(224,156,73,.35);border-radius:99px;background:#0b0806cb;color:#e9c799;padding:7px 11px;font:500 9px var(--sans);letter-spacing:.12em;user-select:none}
+.status::before{content:"";height:6px;width:6px;background:#d8a355;border-radius:50%;box-shadow:0 0 8px #f3a54b}
+.dialog{position:fixed;inset:0;z-index:40;display:grid;place-items:center;background:#000b;backdrop-filter:blur(7px);padding:20px}.dialog[hidden]{display:none}.dialog-card{position:relative;background:linear-gradient(135deg,#211508,#080604);border:1px solid #a4793f;border-radius:10px;padding:38px;max-width:440px}.dialog-card h2{font:500 42px var(--serif)}.dialog-card p{color:#d9cdb9;line-height:1.7}.dialog-card small{color:#e9b875;letter-spacing:.15em}.dialog-close{position:absolute;right:13px;top:8px;font:26px var(--sans);background:none;border:0;color:#ebca9b}
+@media(max-width:860px){.nav-links,.btn-join{display:none}.menu-button,.mobile-items:not([hidden]){display:block}.hero{background-position:78% 100%}.hero:before{background:linear-gradient(90deg,rgba(9,6,3,.89),rgba(9,6,3,.41) 74%)}.content{padding-right:22px}.status{right:9px;bottom:8px}}
+@media(max-width:550px){.content{padding-top:48px;padding-left:20px;padding-bottom:35px}.hero{min-height:calc(100svh - 65px)}h1{font-size:clamp(41px,10.8vw,59px);line-height:1.02}.crumb{font-size:8px}.crumb .long{display:none}.lede{font-size:12px;max-width:320px}.ctas{gap:12px}.watch{font-size:11px}.btn-explore{font-size:11px}.hero:before{background:linear-gradient(90deg,rgba(9,6,3,.89),rgba(9,6,3,.52))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.content>*{animation:none!important}}
+@media(prefers-reduced-motion:no-preference){.content>*{opacity:0;transform:translateY(12px);animation:fadein .65s ease forwards}.content>:nth-child(2){animation-delay:.1s}.content>:nth-child(3){animation-delay:.2s}.content>:nth-child(4){animation-delay:.3s}.content>:nth-child(5){animation-delay:.4s}@keyframes fadein{to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<nav class="main-nav" aria-label="Main navigation">
+ <a href="#" class="brand" aria-label="Top G Global home"><img src="logo.png" alt="Top G Global official gold logo"></a>
+ <ul class="nav-links">
+  <li><a href="#" aria-current="page" class="current">Home</a></li>
+  <li><button data-section="About">About</button></li>
+  <li><button data-section="Seven Realms">Seven Realms</button></li>
+  <li><button data-section="What We Do">What We Do</button></li>
+  <li class="nav-more"><button id="moreButton" aria-expanded="false" aria-controls="moreList">More ⌄</button><div class="subnav" id="moreList" hidden>
+   <button data-section="Five Focus Areas">Five Focus Areas</button>
+   <button data-section="Founder & Pioneers">Founder &amp; Pioneers</button>
+   <button data-section="Impact & Progress">Impact &amp; Progress</button>
+   <button data-section="Contact & FAQs">Contact &amp; FAQs</button>
+  </div></li>
+ </ul>
+ <button data-section="Join Top G" class="btn-join">Join Top G ↗</button>
+ <button id="menuButton" class="menu-button" aria-expanded="false" aria-controls="mobileList">Menu</button>
+ <div id="mobileList" class="mobile-items" hidden>
+  <button data-section="About">About</button><button data-section="Seven Realms">Seven Realms</button><button data-section="What We Do">What We Do</button><button data-section="Five Focus Areas">Five Focus Areas</button><button data-section="Founder & Pioneers">Founder &amp; Pioneers</button><button data-section="Impact & Progress">Impact &amp; Progress</button><button data-section="Contact & FAQs">Contact &amp; FAQs</button><button data-section="Join Top G">Join Top G</button>
+ </div>
+</nav>
+<header class="hero" id="hero">
+ <canvas id="sculpture" aria-hidden="true"></canvas>
+ <div class="aurora" aria-hidden="true"></div>
+ <div class="content">
+  <div class="crumb"><em>Top G Global</em><span class="sep">/</span><span class="long">The journey of becoming</span></div>
+  <h1><span>Transforming</span><span class="italic">ordinary people</span><span>into <span class="gold">giants.</span></span></h1>
+  <div class="rule"></div>
+  <p class="lede">A Kingdom pursuit organization committed to<br>transformation, purpose, leadership and meaningful impact.</p>
+  <div class="ctas"><button class="btn-explore" data-section="Explore Top G">Explore Top G ↗</button><button class="watch" data-section="Watch Our Story"><span class="play">▶</span>Watch Our Story</button></div>
+ </div>
+ <div class="status" id="motionStatus" aria-live="off">MOTION INITIALIZING</div>
+</header>
+<div class="dialog" id="dialog" hidden>
+ <div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="dialogTitle">
+  <button id="dialogClose" class="dialog-close" aria-label="Close">×</button>
+  <small>TOP G GLOBAL · HERO REVIEW</small>
+  <h2 id="dialogTitle">Page preview</h2>
+  <p id="dialogDescription">This section will be developed after hero approval.</p>
+ </div>
+</div>
+<script>
+(()=>{
+"use strict";
+const hero=document.getElementById("hero");
+const canvas=document.getElementById("sculpture");
+const status=document.getElementById("motionStatus");
+const reduced=window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+const saveData=!!navigator.connection?.saveData;
+let pointerX=0,pointerY=0,run=true,visible=true,frame=0;
+hero.addEventListener("pointermove",e=>{
+  const r=hero.getBoundingClientRect();pointerX=((e.clientX-r.left)/Math.max(1,r.width)-.5)*2;pointerY=((e.clientY-r.top)/Math.max(1,r.height)-.5)*2;
+},{passive:true});
+const gl=canvas.getContext("webgl",{alpha:true,antialias:false,premultipliedAlpha:false,powerPreference:"low-power"});
+let drawGPU=null;
+if(gl){
+ const vertex=\`
+ precision highp float;
+ attribute vec2 aUV;
+ uniform float uT,uAspect;uniform vec2 uMouse;
+ varying float vL;
+ void main(){
+  float u=(aUV.x-.5)*2.,v=(aUV.y-.5)*2.;
+  float mask=u*u*.92+v*v*.78;
+  float t=uT;
+  float fold=.55*sin(3.1*u+2.0*v+t*.40)+.35*cos(4.5*v-2.1*u-t*.28);
+  float x=2.2*u*(1.+.075*sin(v*3.+t*.2));
+  float y=1.57*v+.16*sin(u*4.2+t*.25);
+  float z=fold+.23*sin(u*6.2+v*2.5+t*.19);
+  float angle=.12+.19*sin(t*.23)+uMouse.x*.17;
+  float X=x*cos(angle)+z*sin(angle);
+  float Z=-x*sin(angle)+z*cos(angle);
+  float tilt=.11+uMouse.y*.08;
+  float Y=y*cos(tilt)-Z*sin(tilt);
+  Z=y*sin(tilt)+Z*cos(tilt);
+  float persp=5.2/(5.2-Z);
+  float cx=.72+X*.205*persp/(max(1.,uAspect)*.82);
+  float cy=.50+Y*.205*persp;
+  gl_Position=vec4(cx*2.-1.,1.-cy*2.,0.,1.);
+  float shine=.50+.27*sin(2.9*u+3.4*v+t*.5)+.23*sin(6.1*v-1.7*u-t*.27)+.14*Z;
+  vL=clamp(shine,.1,1.);
+  gl_PointSize=mask<1.22?clamp((1.3+2.3*pow(vL,2.))*persp,1.,5.):0.;
+ }\`;
+ const fragment=\`
+ precision mediump float;varying float vL;
+ void main(){
+ vec2 q=gl_PointCoord-.5;float r=length(q);float a=1.-smoothstep(.09,.5,r);
+ vec3 bronze=vec3(.49,.22,.05),gold=vec3(.99,.66,.22),ivory=vec3(1.,.88,.56);
+ vec3 color=mix(bronze,gold,vL);color=mix(color,ivory,pow(vL,4.)*.55);
+ gl_FragColor=vec4(color,a*(.18+.76*vL));
+ }\`;
+ const compile=(kind,src)=>{const s=gl.createShader(kind);if(!s)return null;gl.shaderSource(s,src);gl.compileShader(s);if(gl.getShaderParameter(s,gl.COMPILE_STATUS))return s;gl.deleteShader(s);return null;};
+ const vs=compile(gl.VERTEX_SHADER,vertex),fs=compile(gl.FRAGMENT_SHADER,fragment);
+ if(vs&&fs){
+  const p=gl.createProgram();gl.attachShader(p,vs);gl.attachShader(p,fs);gl.linkProgram(p);
+  if(gl.getProgramParameter(p,gl.LINK_STATUS)){
+   const n=saveData?6500:21000;
+   const uv=new Float32Array(n*2);let k=0;
+   for(let j=0;j<n;j++){uv[k++]=(j*.61803398875)%1;uv[k++]=((j+.5)/n+Math.sin(j*2.3999632)*.004+1)%1;}
+   const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,uv,gl.STATIC_DRAW);
+   gl.useProgram(p);const loc=gl.getAttribLocation(p,"aUV");gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+   const uT=gl.getUniformLocation(p,"uT"),uAspect=gl.getUniformLocation(p,"uAspect"),uMouse=gl.getUniformLocation(p,"uMouse");
+   drawGPU=(time)=>{
+    const dpr=Math.min(devicePixelRatio||1,1.5),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));
+    if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+    gl.viewport(0,0,w,h);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);gl.useProgram(p);
+    gl.uniform1f(uT,reduced?0:time);gl.uniform1f(uAspect,w/Math.max(1,h));gl.uniform2f(uMouse,pointerX,pointerY);
+    gl.drawArrays(gl.POINTS,0,n);
+   };
+  }
+ }
+}
+let draw=drawGPU,renderer=drawGPU?"WEBGL 3D":"CANVAS 3D";
+if(!draw){
+ // This renderer is intentionally independent of WebGL: even local file:// URLs animate.
+ const replacement=document.createElement("canvas");replacement.id="sculpture";
+ canvas.replaceWith(replacement);
+ const ctx=replacement.getContext("2d",{alpha:true});
+ if(ctx){
+  const n=saveData?2500:8600;
+  let seed=67987;
+  const random=()=>((seed=(Math.imul(seed,1664525)+1013904223)>>>0)/4294967296);
+  const pts=Array.from({length:n},()=>[(random()-.5)*2,(random()-.5)*2,random()]);
+  draw=time=>{
+    const dpr=Math.min(devicePixelRatio||1,1.25),w=Math.max(1,Math.floor(replacement.clientWidth*dpr)),h=Math.max(1,Math.floor(replacement.clientHeight*dpr));
+    if(replacement.width!==w||replacement.height!==h){replacement.width=w;replacement.height=h;}
+    ctx.clearRect(0,0,w,h);
+    const t=reduced?0:time,angle=.12+.19*Math.sin(t*.23)+pointerX*.17,tilt=.11+pointerY*.08;
+    ctx.globalCompositeOperation="lighter";
+    for(const [u,v,rnd] of pts){
+     const mask=u*u*.92+v*v*.78;if(mask>1.22)continue;
+     const fold=.55*Math.sin(3.1*u+2*v+t*.4)+.35*Math.cos(4.5*v-2.1*u-t*.28);
+     const x=2.2*u*(1+.075*Math.sin(v*3+t*.2)),y=1.57*v+.16*Math.sin(u*4.2+t*.25),z=fold+.23*Math.sin(u*6.2+v*2.5+t*.19);
+     const X=x*Math.cos(angle)+z*Math.sin(angle),Z=-x*Math.sin(angle)+z*Math.cos(angle);
+     const Y=y*Math.cos(tilt)-Z*Math.sin(tilt),depth=5.2/(5.2-(y*Math.sin(tilt)+Z*Math.cos(tilt)));
+     const sx=w*(.72+X*.205*depth/(Math.max(1,w/h)*.82)),sy=h*(.50+Y*.205*depth);
+     const l=Math.max(.10,Math.min(1,.5+.27*Math.sin(2.9*u+3.4*v+t*.5)+.23*Math.sin(6.1*v-1.7*u-t*.27)+.14*Z));
+     const r=Math.max(.7,(.65+1.3*l+.4*rnd)*depth*dpr);
+     ctx.fillStyle="rgba("+Math.round(136+113*l)+","+Math.round(67+114*l)+","+Math.round(19+78*l)+","+(0.24+0.65*l).toFixed(2)+")";
+     ctx.fillRect(sx,sy,r,r);
+    }
+    ctx.globalCompositeOperation="source-over";
+   };
+ }else{renderer="UNAVAILABLE";draw=()=>{};}
+}
+if(reduced){status.textContent="MOTION OFF · ACCESSIBILITY";draw(0);}else{
+ let last=0,count=0;
+ const observer=new IntersectionObserver(e=>{visible=e[0]?.isIntersecting??false;if(visible&&!frame)frame=requestAnimationFrame(tick);});
+ observer.observe(hero);
+ function tick(ms){
+  frame=0;if(!run||!visible||document.hidden)return;
+  if(ms-last<33){frame=requestAnimationFrame(tick);return;}
+  last=ms;draw(ms*.001);
+  if(++count%20===0)status.textContent="LIVE MOTION · "+renderer+" · "+count+" FRAMES";
+  frame=requestAnimationFrame(tick);
+ }
+ frame=requestAnimationFrame(tick);
+ document.addEventListener("visibilitychange",()=>{if(!document.hidden&&!frame)frame=requestAnimationFrame(tick)});
+ addEventListener("pagehide",()=>{run=false;observer.disconnect();if(frame)cancelAnimationFrame(frame)},{once:true});
+}
+const more=document.getElementById("moreButton"),list=document.getElementById("moreList");
+more.addEventListener("click",()=>{list.hidden=!list.hidden;more.setAttribute("aria-expanded",String(!list.hidden));});
+const mobileButton=document.getElementById("menuButton"),mobile=document.getElementById("mobileList");
+mobileButton.addEventListener("click",()=>{mobile.hidden=!mobile.hidden;mobileButton.setAttribute("aria-expanded",String(!mobile.hidden));});
+const dialog=document.getElementById("dialog");
+function closeDialog(){dialog.hidden=true;}
+document.querySelectorAll("[data-section]").forEach(btn=>btn.addEventListener("click",()=>{
+ const name=btn.dataset.section;
+ document.getElementById("dialogTitle").textContent=name;
+ document.getElementById("dialogDescription").textContent=name==="Watch Our Story"?"The official story film has not been added yet.":"This is an interactive hero preview; the "+name+" section will be built after approval.";
+ dialog.hidden=false;list.hidden=true;more.setAttribute("aria-expanded","false");mobile.hidden=true;mobileButton.setAttribute("aria-expanded","false");
+}));
+document.getElementById("dialogClose").addEventListener("click",closeDialog);
+dialog.addEventListener("click",e=>{if(e.target===dialog)closeDialog();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDialog();});
+})();
+</script>
+</body>
+</html>
