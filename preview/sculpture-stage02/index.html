@@ -15,8 +15,9 @@ if(!gl){err('WEBGL UNAVAILABLE — ENABLE HARDWARE ACCELERATION');return;}
 const vs=
 `precision highp float;
 attribute vec2 aUV;
-uniform float uTime,uAspect,uDpr,uYaw,uPitch,uHalo,uDepthMode;
-varying float vLight,vDepth,vOpacity;
+uniform float uTime,uAspect,uDpr,uYaw,uPitch;
+uniform mediump float uHalo,uDepthMode;
+varying mediump float vLight,vDepth,vOpacity;
 const float PI=3.141592653589793;
 vec3 sculpture(vec2 uv,float t){
   float u=uv.x*6.2831853-PI;
@@ -54,8 +55,8 @@ void main(){
 }`;
 const fs=
 `precision mediump float;
-uniform float uHalo,uDepthMode;
-varying float vLight,vDepth,vOpacity;
+uniform mediump float uHalo,uDepthMode;
+varying mediump float vLight,vDepth,vOpacity;
 void main(){
   vec2 q=gl_PointCoord-.5; float r=length(q);
   float core=1.0-smoothstep(.18,.52,r);
@@ -87,7 +88,7 @@ function draw(){let dpr=Math.min(devicePixelRatio||1,low?1.15:1.5),w=Math.max(1,
  gl.uniform1f(uTime,elapsed);gl.uniform1f(uAspect,w/h);gl.uniform1f(uDpr,dpr);gl.uniform1f(uYaw,mouseX);gl.uniform1f(uPitch,mouseY);gl.uniform1f(uDepthMode,depthTest?1:0);
  gl.uniform1f(uHalo,1);gl.drawArrays(gl.POINTS,0,n);gl.uniform1f(uHalo,0);gl.drawArrays(gl.POINTS,0,n);
 }
-function tick(t){frame=0;if(disposed||!visible||document.hidden)return;let dt=last?Math.min(.08,(t-last)/1000):0;last=t;if(moving)elapsed+=dt;draw();if(moving||dragging)frame=requestAnimationFrame(tick);}
+function tick(t){frame=0;if(disposed||!visible||document.hidden)return;let dt=last?Math.min(.08,(t-last)/1000):0;last=t;if(moving)elapsed+=dt;draw();const desiredYaw=(side?1.46:-.32)+.12*Math.sin(elapsed*.17)+targetX*.35;const desiredPitch=.12+targetY*.18;const settling=Math.abs(desiredYaw-mouseX)>.001||Math.abs(desiredPitch-mouseY)>.001;if(moving||dragging||settling)frame=requestAnimationFrame(tick);}
 function resume(){if(!frame&&!disposed&&visible)frame=requestAnimationFrame(tick)}
 canvas.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture?.(e.pointerId);resume()});
 canvas.addEventListener('pointerup',()=>dragging=false);canvas.addEventListener('pointercancel',()=>dragging=false);
