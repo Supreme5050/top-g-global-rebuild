@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#090604"><title>Top G Global — Real 3D Sculpture Lab</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--gold:#e5a65b;--warm:#f7d295;--cream:#f4eee4;--muted:#c5b8a7}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#080502;color:var(--cream);font-family:Jost,Arial,sans-serif}button,a{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid #e9ae63;outline-offset:4px}a{color:inherit;text-decoration:none}.page{min-height:100svh;background:#070503}.navbar{position:relative;z-index:5;height:82px;padding:0 clamp(17px,3.5vw,58px);border-bottom:1px solid #b27f4533;display:flex;align-items:center;justify-content:space-between;background:#0b0806e8}.brand img{display:block;width:auto;height:67px;max-width:176px;object-fit:contain}.menu{display:flex;gap:clamp(15px,3.1vw,46px);align-items:center}.menu button{border:0;background:none;color:#d3c6b2;text-transform:uppercase;letter-spacing:.13em;font-size:10px;padding:15px 0}.menu .current{border-bottom:1px solid #cf934d;color:#f1bb75}.join{white-space:nowrap;border:1px solid #d59b52;color:#efbb78;background:#261606;border-radius:8px;padding:12px 18px;box-shadow:0 0 18px #e49c3825;font-size:12px}.join span{margin-left:10px}.mobile{display:none}.hero{height:calc(100svh - 82px);min-height:660px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 45% 60% at 82% 50%,#39200d 0%,#170d07 50%,transparent 90%),linear-gradient(120deg,#050402 2%,#120a05 67%,#0a0604)}.hero:before{content:"";position:absolute;z-index:1;pointer-events:none;inset:0;background:linear-gradient(90deg,#080503 0%,#080503f5 22%,#080503ab 39%,transparent 65%)}.floor{z-index:0;position:absolute;right:-8%;bottom:-7%;width:93%;height:31%;pointer-events:none;background:radial-gradient(ellipse at 75% 77%,#d1782a57,transparent 44%),radial-gradient(ellipse at 68% 82%,#f5a65324,transparent 65%);filter:blur(22px)}.floor:after{content:"";position:absolute;bottom:8%;left:12%;width:95%;height:34%;background:repeating-linear-gradient(175deg,transparent 0 21px,#e49b2740 22px,transparent 23px 41px);transform:perspective(400px) rotateX(65deg);opacity:.6}#gl{position:absolute;z-index:0;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}.content{position:relative;z-index:2;margin-left:clamp(25px,7.2vw,115px);padding-top:clamp(66px,11vh,118px);width:53%;pointer-events:none}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#d9cbb6}.kicker:before{content:"";display:inline-block;width:29px;height:1px;background:var(--gold);vertical-align:middle;margin-right:13px}.kicker b{font-weight:500;color:var(--gold)}.kicker span{padding:0 13px}.content h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(70px,6.0vw,103px);font-weight:500;letter-spacing:-.035em;line-height:.88;margin:50px 0 0;text-shadow:0 5px 20px #0008}.content h1 em{font-weight:400}.content h1 .highlight{color:var(--gold)}.divider{height:2px;width:42px;background:#e5a65b;margin:30px 0 30px}.lead{font-size:16px;line-height:1.65;color:var(--muted);margin:0 0 28px}.actions{display:flex;gap:30px;align-items:center;pointer-events:auto}.explore{padding:15px 22px;border:0;border-radius:8px;font-size:14px;color:#1b0f04;background:linear-gradient(130deg,#fbd08e,#dc963d);box-shadow:0 0 25px #e8a6503b}.watch{display:flex;align-items:center;gap:12px;color:#ead0ab;background:none;border:0;font-size:14px}.circle{width:39px;height:39px;border-radius:50%;border:1px solid #dca55d;display:grid;place-items:center;font-size:11px}.inspector{position:absolute;bottom:22px;right:24px;z-index:3;display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end;max-width:520px}.inspector button{color:#e9cc9d;background:#150e0acc;border:1px solid #b47d4380;border-radius:6px;padding:8px 11px;font:500 11px Jost,Arial,sans-serif}.inspector button[aria-pressed="true"]{background:#704113;color:#fff1d0}.status{font-size:10px;color:#ebc893;background:#120c08e0;border:1px solid #c3915539;border-radius:7px;padding:8px 10px;letter-spacing:.05em}.status[data-error="true"]{color:#ffc3b0;border-color:#ce513c}.hint{position:absolute;bottom:77px;right:27px;z-index:2;font-size:10px;color:#dbaf73;letter-spacing:.13em;text-transform:uppercase}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1100px){.menu{gap:16px}.content h1{font-size:clamp(63px,6.25vw,84px)}}@media(max-width:850px){.menu,.join{display:none}.mobile{display:block;background:#160e08;border:1px solid #a9783f;border-radius:5px;color:#eac28d;padding:8px 12px;font-size:12px}.content{margin-left:6%;width:88%;padding-top:72px}.content h1{font-size:clamp(63px,9.1vw,77px)}.hero:before{background:linear-gradient(90deg,#070503eb,#0705038c 72%,#07050330)}.inspector{left:12px;right:12px;bottom:12px;justify-content:center}.hint{right:12px;bottom:107px}}@media(max-width:550px){.navbar{height:70px}.brand img{height:60px}.hero{min-height:710px;height:calc(100svh - 70px)}.content{margin-left:23px;width:calc(100% - 46px);padding-top:78px}.kicker{font-size:9px}.kicker span{padding:0 5px}.content h1{font-size:clamp(50px,11.5vw,64px);margin-top:42px}.divider{margin:27px 0}.lead{font-size:12px}.actions{gap:11px}.explore{font-size:11px;padding:12px}.watch{font-size:11px}.circle{height:30px;width:30px}.hint{bottom:131px}.inspector{max-width:none}.inspector button{padding:7px 8px;font-size:10px}.status{font-size:9px}.hero:before{background:linear-gradient(90deg,#070503de,#07050388 74%)} }@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important}}
+</style></head><body><div class="page"><nav class="navbar" aria-label="Site navigation"><a class="brand" href="#hero" aria-label="Top G Global"><img alt="Official Top G Global logo" src="logo.png" width="170" height="67"></a><div class="menu"><button class="current">Home</button><button>About</button><button>Seven Realms</button><button>What We Do</button><button>More⌄</button></div><button class="join">Join Top G <span>↗</span></button><button class="mobile" aria-label="Mobile navigation preview">Menu</button></nav><main><section class="hero" id="hero"><canvas id="gl" aria-label="Animated 3D gold particle sculpture" role="img"></canvas><div class="floor" aria-hidden="true"></div><div class="content"><div class="kicker"><b>TOP G GLOBAL</b><span>/</span>THE JOURNEY OF BECOMING</div><h1>Transforming<br><em>ordinary people</em><br>into <span class="highlight">giants.</span></h1><div class="divider"></div><p class="lead">A Kingdom pursuit organization committed to<br>transformation, purpose, leadership and meaningful impact.</p><div class="actions"><button class="explore" type="button">Explore Top G ↗</button><button class="watch" type="button"><span class="circle">▶</span>Watch Our Story</button></div></div><div class="hint">DRAG THE SCULPTURE · INSPECT THE FOLDS</div><div class="inspector"><span class="status" id="status" aria-live="polite">INITIALIZING WEBGL</span><button id="view" aria-pressed="false">Side view</button><button id="pause" aria-pressed="false">Pause motion</button><button id="speed" aria-pressed="false">Show depth</button></div></section></main></div>
+<script>
+(()=>{'use strict';
+const canvas=document.getElementById('gl'),status=document.getElementById('status'),view=document.getElementById('view'),pause=document.getElementById('pause'),speed=document.getElementById('speed');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let moving=!reduced,side=false,depthTest=false,visible=true,frame=0,disposed=false,last=0,elapsed=0;
+let targetX=0,targetY=0,mouseX=0,mouseY=0,dragging=false,lastX=0,lastY=0;
+const err=(message)=>{status.textContent=message;status.dataset.error='true';console.error('[Top G 3D]',message)};
+const gl=canvas.getContext('webgl',{alpha:true,depth:true,antialias:false,powerPreference:'high-performance',premultipliedAlpha:false});
+if(!gl){err('WEBGL UNAVAILABLE — ENABLE HARDWARE ACCELERATION');return;}
+const vs=
+`precision highp float;
+attribute vec2 aUV;
+uniform float uTime,uAspect,uDpr,uYaw,uPitch,uHalo,uDepthMode;
+varying float vLight,vDepth,vOpacity;
+const float PI=3.141592653589793;
+vec3 sculpture(vec2 uv,float t){
+  float u=uv.x*6.2831853-PI;
+  float v=(uv.y-.5)*2.50;
+  float latitude=cos(v);
+  float ripples=.17*sin(5.0*u+2.4*v+t*.30)+.085*cos(9.0*u-4.2*v-t*.23);
+  float radius=(1.51+.24*cos(2.0*v)+ripples)*latitude;
+  float curl=.20*sin(3.0*u-3.4*v+t*.22)*latitude;
+  float x=(radius+curl)*cos(u);
+  float z=(radius+curl)*sin(u)*.72+.17*sin(2.8*v+3.1*u+t*.14);
+  float y=1.52*sin(v)+.14*sin(3.1*u+2.2*v+t*.27)*latitude;
+  y+=.11*cos(4.0*u+t*.2)*pow(abs(latitude),3.);
+  return vec3(x,y,z);
+}
+void main(){
+  vec3 p=sculpture(aUV,uTime);
+  float cy=cos(uYaw),sy=sin(uYaw);
+  p=vec3(p.x*cy+p.z*sy,p.y,-p.x*sy+p.z*cy);
+  float cp=cos(uPitch),sp=sin(uPitch);
+  p=vec3(p.x,p.y*cp-p.z*sp,p.y*sp+p.z*cp);
+  // Near points have higher perspective scale, distant points become smaller.
+  float perspective=5.6/max(2.5,5.6-p.z);
+  float aspectAdjust=max(1.0,uAspect/1.65);
+  float outX=.48+p.x*.57*perspective/aspectAdjust;
+  float outY=.02+p.y*.53*perspective;
+  gl_Position=vec4(outX,outY,.0,1.);
+  float zoom=clamp(perspective,.57,1.7);
+  vDepth=clamp((p.z+1.8)/3.6,0.,1.);
+  float high=pow(max(0.,.48+.28*p.x+.29*p.y+.13*sin(aUV.x*37.+aUV.y*16.+uTime*.14)),2.1);
+  float rim=pow(abs(sin(aUV.x*19.0+aUV.y*11.0+uTime*.11)),8.0)*.25;
+  vLight=clamp(.22+.60*high+.27*vDepth+rim,0.,1.);
+  vOpacity=clamp(.22+.75*vDepth,.15,1.);
+  float baseSize=mix(1.25,3.5,vDepth)*zoom*uDpr;
+  gl_PointSize=clamp(baseSize*(1.0+uHalo*3.0),1.0,19.0);
+}`;
+const fs=
+`precision mediump float;
+uniform float uHalo,uDepthMode;
+varying float vLight,vDepth,vOpacity;
+void main(){
+  vec2 q=gl_PointCoord-.5; float r=length(q);
+  float core=1.0-smoothstep(.18,.52,r);
+  float halo=exp(-r*r*19.0)*(1.0-smoothstep(.18,.51,r));
+  vec3 bronze=vec3(.46,.20,.052);
+  vec3 warm=vec3(.94,.56,.19);
+  vec3 ivory=vec3(1.,.85,.54);
+  vec3 gold=mix(bronze,warm,clamp(vLight*1.4,0.,1.));
+  gold=mix(gold,ivory,pow(vLight,3.0)*.68);
+  if(uDepthMode>0.5){ gold=mix(vec3(.25,.35,.65),vec3(1.,.77,.18),vDepth); }
+  float alpha=(uHalo>.5?halo*.11:core*(.35+.65*vLight))*vOpacity;
+  gl_FragColor=vec4(gold,alpha);
+}`;
+const shader=(kind,source)=>{let s=gl.createShader(kind);if(!s)return null;gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)){err('SHADER ERROR: '+gl.getShaderInfoLog(s));gl.deleteShader(s);return null}return s};
+let vShader=shader(gl.VERTEX_SHADER,vs),fShader=shader(gl.FRAGMENT_SHADER,fs);if(!vShader||!fShader)return;
+let program=gl.createProgram();gl.attachShader(program,vShader);gl.attachShader(program,fShader);gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS)){err('PROGRAM LINK ERROR: '+gl.getProgramInfoLog(program));return;}
+gl.useProgram(program);
+const low=(matchMedia('(max-width: 700px)').matches||navigator.connection?.saveData||navigator.hardwareConcurrency<=3);
+const nx=low?235:340,ny=low?116:184,n=nx*ny;
+const uv=new Float32Array(n*2);let pos=0;for(let j=0;j<ny;j++)for(let i=0;i<nx;i++){uv[pos++]=(i+.5*(j%2))/nx;uv[pos++]=(j+.5)/ny;}
+const buffer=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buffer);gl.bufferData(gl.ARRAY_BUFFER,uv,gl.STATIC_DRAW);
+const a=gl.getAttribLocation(program,'aUV');gl.enableVertexAttribArray(a);gl.vertexAttribPointer(a,2,gl.FLOAT,false,0,0);
+const uTime=gl.getUniformLocation(program,'uTime'),uAspect=gl.getUniformLocation(program,'uAspect'),uDpr=gl.getUniformLocation(program,'uDpr'),uYaw=gl.getUniformLocation(program,'uYaw'),uPitch=gl.getUniformLocation(program,'uPitch'),uHalo=gl.getUniformLocation(program,'uHalo'),uDepthMode=gl.getUniformLocation(program,'uDepthMode');
+status.textContent='REAL WEBGL · '+Math.round(n/1000)+'K POINTS';
+function draw(){let dpr=Math.min(devicePixelRatio||1,low?1.15:1.5),w=Math.max(1,Math.round(canvas.clientWidth*dpr)),h=Math.max(1,Math.round(canvas.clientHeight*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}gl.viewport(0,0,w,h);gl.clearColor(0,0,0,0);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.BLEND);gl.disable(gl.DEPTH_TEST);gl.blendFunc(gl.SRC_ALPHA,gl.ONE);
+ const targetYaw=(side?1.46:-.32)+.12*Math.sin(elapsed*.17)+targetX*.35;
+ const targetPitch=.12+targetY*.18;
+ mouseX+=.055*(targetYaw-mouseX);mouseY+=.055*(targetPitch-mouseY);
+ gl.uniform1f(uTime,elapsed);gl.uniform1f(uAspect,w/h);gl.uniform1f(uDpr,dpr);gl.uniform1f(uYaw,mouseX);gl.uniform1f(uPitch,mouseY);gl.uniform1f(uDepthMode,depthTest?1:0);
+ gl.uniform1f(uHalo,1);gl.drawArrays(gl.POINTS,0,n);gl.uniform1f(uHalo,0);gl.drawArrays(gl.POINTS,0,n);
+}
+function tick(t){frame=0;if(disposed||!visible||document.hidden)return;let dt=last?Math.min(.08,(t-last)/1000):0;last=t;if(moving)elapsed+=dt;draw();if(moving||dragging)frame=requestAnimationFrame(tick);}
+function resume(){if(!frame&&!disposed&&visible)frame=requestAnimationFrame(tick)}
+canvas.addEventListener('pointerdown',e=>{dragging=true;lastX=e.clientX;lastY=e.clientY;canvas.setPointerCapture?.(e.pointerId);resume()});
+canvas.addEventListener('pointerup',()=>dragging=false);canvas.addEventListener('pointercancel',()=>dragging=false);
+canvas.addEventListener('pointermove',e=>{if(dragging){targetX=Math.max(-1.7,Math.min(1.7,targetX+(e.clientX-lastX)*.006));targetY=Math.max(-1.4,Math.min(1.4,targetY+(e.clientY-lastY)*.006));lastX=e.clientX;lastY=e.clientY;}else{let r=canvas.getBoundingClientRect();targetX=((e.clientX-r.left)/r.width-.60)*1.1;targetY=((e.clientY-r.top)/r.height-.50)*-.65;}resume()},{passive:true});
+canvas.addEventListener('pointerleave',()=>{if(!dragging){targetX*=.40;targetY*=.40}});
+view.addEventListener('click',()=>{side=!side;view.textContent=side?'Front view':'Side view';view.setAttribute('aria-pressed',String(side));resume()});
+pause.addEventListener('click',()=>{moving=!moving;pause.textContent=moving?'Pause motion':'Resume motion';pause.setAttribute('aria-pressed',String(!moving));last=0;resume()});
+speed.addEventListener('click',()=>{depthTest=!depthTest;speed.textContent=depthTest?'Gold lighting':'Show depth';speed.setAttribute('aria-pressed',String(depthTest));resume()});
+const observer=new IntersectionObserver(e=>{visible=e[0]?.isIntersecting??false;if(visible){last=0;resume()}},{threshold:.01});observer.observe(canvas);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){last=0;resume()}});
+window.addEventListener('resize',resume,{passive:true});
+window.addEventListener('pagehide',()=>{disposed=true;observer.disconnect();cancelAnimationFrame(frame);gl.deleteBuffer(buffer);gl.deleteProgram(program);gl.deleteShader(vShader);gl.deleteShader(fShader)},{once:true});
+if(reduced){pause.textContent='Resume motion';pause.setAttribute('aria-pressed','true');status.textContent+=' · REDUCED MOTION'}
+resume();
+})();
+</script></body></html>
