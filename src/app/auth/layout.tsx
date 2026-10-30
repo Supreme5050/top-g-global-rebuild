@@ -29,7 +29,7 @@ export default function AccountLayout({ children }: Readonly<{ children: ReactNo
         <div className={styles.main}>{children}</div>
       </div>
       <footer className={styles.footer}>
-        <span>© {new Date().getFullYear()} Top G Global. All rights reserved.</span>
+        <span>© 2026 Top G Global. All rights reserved.</span>
         <span>Privacy&nbsp; • &nbsp;Terms&nbsp; • &nbsp;Code of Conduct</span>
       </footer>
       </div>
